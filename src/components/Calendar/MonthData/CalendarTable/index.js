@@ -25,9 +25,13 @@ const CalendarTable = (props) => {
     return <li key={i} title={day} >{day.slice(0,2)}</li>
   }
 
-
+  
   const mapDays = (day, i) => {
-    return  day? <li className={cx(isToday(day) ? styles.today : null, isWeekend(day) ? styles.weekend : null)} key={i} title={format(day,"dd MMMM yyyy cccc")}>{format(day, 'd')}</li> : <li  className={styles.emptyCells} key={i}></li>
+    return  day? <li className={cx({
+      [styles.today]:isToday(day),
+      [styles.weekend]:isWeekend(day)
+
+    })} key={i} title={format(day,"dd MMMM yyyy cccc")}>{format(day, 'd')}</li> : <li  className={styles.emptyCells} key={i}></li>
   } 
 
   return (
