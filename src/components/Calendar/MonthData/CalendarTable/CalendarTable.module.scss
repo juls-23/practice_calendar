@@ -1,0 +1,56 @@
+@import '/src/common/styles/breakpoints';
+@import '/src/common/styles/colors';
+
+.weekNames{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: $accentColor;
+  margin-top: 1.3rem;
+  
+  *{
+    text-align: center;
+    font-size: 1.4rem;
+    @media screen and (max-width: $sm){
+      font-size: 1em
+     }
+  }
+}
+
+.calendarDays{
+  display: grid;
+  grid-template-columns:  repeat(7, 14%);
+  place-items: center;
+  box-sizing: border-box;
+  grid-gap:1.6rem 0.1rem;
+  margin-top: 1rem;
+  
+
+  *{
+    -webkit-box-shadow: 5px 5px 5px -5px rgba(161, 196, 223, 0.6) inset;
+    -moz-box-shadow: 5px 5px 5px -5px rgba(161, 196, 223, 0.6) inset;
+    box-shadow: 5px 5px 5px -5px rgba(161, 196, 223, 0.6) inset;
+    color: $daysColor;
+    text-align: center;
+    font-size: 1.5rem;
+    color: $daysColor;
+    overflow: hidden;
+    
+  }
+
+  .emptyCells{
+    box-shadow: none;
+  }
+  
+}
+
+.today{
+  border: 2px solid $accentColor;
+  color: $accentColor;
+  
+ 
+}
+
+.weekend{
+  color: $weekendDaysColor;
+}

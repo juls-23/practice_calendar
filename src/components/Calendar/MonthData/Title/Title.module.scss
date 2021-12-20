@@ -1,0 +1,9 @@
+@import '/src/common/styles/colors';
+@import '/src/common/styles/breakpoints';
+
+.title{
+  text-align: center;
+  color: $mainColor;
+  text-transform: uppercase;
+  font-size: 2rem;
+}

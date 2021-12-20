@@ -1,0 +1,21 @@
+@import '/src/common/styles/breakpoints';
+@import '/src/common/styles/colors';
+
+.currentDayWrapper{
+  background-color: $mainColor;
+  text-align: center;
+  color: $lightColor;
+}
+
+.title{
+  font-size: 2rem;
+  margin-top: 2.6rem;
+}
+
+.currentDay{
+  font-size: 17rem;
+  margin-top: 1rem;
+  @media screen and (max-width: $sm){
+    font-size: 10rem;
+  }
+}
