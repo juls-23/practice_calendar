@@ -8,7 +8,7 @@ const Title = (props) => {
 
   return (
     <>
-      <h2 className={styles.title}>{format(data, 'MMMM YYY')}</h2>
+      <h2 className={styles.title}>{format(data, 'MMMM 	yyy')}</h2>
     </>
   );
 }
